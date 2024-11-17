@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import Shop from './components/Shop';
+import Footer from './components/Footer';  // Footer 컴포넌트 추가
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* 헤더 컴포넌트 */}
+      <Header />
+      {/* 쇼핑몰 콘텐츠 컴포넌트 */}
+      <Shop />
+      {/* 푸터 컴포넌트 */}
+      <Footer />
     </div>
   );
 }

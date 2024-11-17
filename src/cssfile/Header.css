@@ -1,0 +1,48 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  flex: 1;
+  border: 1px dashed #333;  /* 로고 영역을 시각적으로 구분하기 위한 선 */
+  padding: 10px;
+  text-align: center;
+}
+
+.shop-name {
+  flex: 2;
+  text-align: center;
+  border: 1px dashed #333;  /* 쇼핑몰 이름 영역을 시각적으로 구분하기 위한 선 */
+}
+
+.shop-name h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0;
+}
+
+.header-links {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  flex: 1;
+  border: 1px dashed #333;  /* 링크 영역을 시각적으로 구분하기 위한 선 */
+  padding: 10px;
+}
+
+.header-link {
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header-link:hover {
+  color: #007bff;
+}
