@@ -1,24 +1,29 @@
-
+/* ì „ì²´ í—¤ë” ìŠ¤íƒ€ì¼ */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
-  background-color: #f8f8f8;
+  padding: 10px 20px;
+  background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;  /* ì „ì²´ í™”ë©´ì„ ê½‰ ì±„ìš°ë„ë¡ */
+  box-sizing: border-box;  /* paddingì„ í¬í•¨í•œ í¬ê¸°ë¡œ ì„¤ì • */
 }
 
+/* ë¡œê³  ì˜ì—­ */
 .logo {
   flex: 1;
-  border: 1px dashed #333;  /* ·Î°í ¿µ¿ªÀ» ½Ã°¢ÀûÀ¸·Î ±¸ºĞÇÏ±â À§ÇÑ ¼± */
-  padding: 10px;
-  text-align: center;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  padding: 0 10px;
 }
 
+/* ì‡¼í•‘ëª° ì´ë¦„ */
 .shop-name {
   flex: 2;
   text-align: center;
-  border: 1px dashed #333;  /* ¼îÇÎ¸ô ÀÌ¸§ ¿µ¿ªÀ» ½Ã°¢ÀûÀ¸·Î ±¸ºĞÇÏ±â À§ÇÑ ¼± */
 }
 
 .shop-name h1 {
@@ -27,22 +32,51 @@
   margin: 0;
 }
 
+/* ì˜¤ë¥¸ìª½ ë§í¬ë“¤ */
 .header-links {
   display: flex;
   gap: 20px;
-  justify-content: flex-end;
-  flex: 1;
-  border: 1px dashed #333;  /* ¸µÅ© ¿µ¿ªÀ» ½Ã°¢ÀûÀ¸·Î ±¸ºĞÇÏ±â À§ÇÑ ¼± */
-  padding: 10px;
+  justify-content: flex-end;  /* ì˜¤ë¥¸ìª½ ì •ë ¬ */
+  flex: 2;  /* ì¶©ë¶„í•œ ê³µê°„ í™•ë³´ */
 }
 
+/* ë§í¬ ìŠ¤íƒ€ì¼ */
 .header-link {
   font-size: 1rem;
   color: #333;
   text-decoration: none;
-  transition: color 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* ë§í¬ hover ì‹œ ìŠ¤íƒ€ì¼ */
 .header-link:hover {
-  color: #007bff;
+  background-color: #007bff;
+  color: #fff;  /* ë°°ê²½ìƒ‰ ë³€ê²½, ê¸€ììƒ‰ í°ìƒ‰ */
+}
+
+/* ê´€ë¦¬ì í˜ì´ì§€ ë§í¬ ìŠ¤íƒ€ì¼ */
+.admin-link {
+  color: blue;  /* íŒŒë€ìƒ‰ í…ìŠ¤íŠ¸ */
+  font-weight: bold;
+}
+
+/* ì‘ì€ í™”ë©´ì—ì„œ ë§í¬ë“¤ì´ ê²¹ì¹˜ëŠ” ë¬¸ì œë¥¼ ë°©ì§€ */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* ëª¨ë°”ì¼ì—ì„œëŠ” ì„¸ë¡œë¡œ ìŒ“ì´ê²Œ */
+    align-items: center;
+  }
+
+  .header-links {
+    flex-direction: column;  /* ë§í¬ë“¤ì„ ì„¸ë¡œë¡œ ë°°ì¹˜ */
+    gap: 10px;
+    align-items: center;  /* ì¤‘ì•™ ì •ë ¬ */
+  }
+
+  .header-link {
+    padding: 10px 20px;  /* ëª¨ë°”ì¼ì—ì„œëŠ” ì—¬ë°±ì„ ì¡°ê¸ˆ ë” í¬ê²Œ */
+  }
 }

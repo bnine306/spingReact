@@ -6,7 +6,6 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState(''); // 로그인 실패 시 에러 메시지
-  const [responseMessage, setResponseMessage] = useState(''); // 서버에서 반환한 메시지
   const navigate = useNavigate(); // navigate 객체 생성
 
   const handleSubmit = async (e) => {
@@ -30,11 +29,11 @@ function Login() {
       if (response.ok) {
         // 로그인 성공
         alert(result.message); // 서버에서 성공 메시지 출력
+        localStorage.setItem('userId', result.id); // 로그인 성공 시 사용자 ID를 로컬스토리지에 저장
         navigate('/'); // 로그인 성공 후 홈으로 이동
       } else {
         // 로그인 실패 시 에러 메시지 출력
         setLoginError(result.message); 
-        setResponseMessage(''); // 실패 시 서버에서 받은 메시지 설정
       }
     } catch (error) {
       // 네트워크 오류 등 실패 처리
@@ -69,9 +68,6 @@ function Login() {
 
       {/* 로그인 실패 시 에러 메시지 출력 */}
       {loginError && <p style={{ color: 'red' }}>{loginError}</p>}
-
-      {/* 서버에서 응답받은 메시지 출력 */}
-      {responseMessage && <p>{responseMessage}</p>}
 
       {/* 홈으로 돌아가기 버튼 */}
       <button onClick={() => navigate('/')}>홈으로 돌아가기</button>

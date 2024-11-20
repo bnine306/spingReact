@@ -36,6 +36,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 10px; /* 버튼 간 간격 추가 */
 }
 
 button:hover {
@@ -45,4 +46,9 @@ button:hover {
 p {
   font-size: 0.9rem;
   color: red;
+}
+
+/* 추가된 부분: 홈으로 돌아가기 버튼과 회원가입 버튼 간 간격을 추가 */
+button + button {
+  margin-top: 15px; /* 두 번째 버튼과 첫 번째 버튼 사이에 간격을 추가 */
 }

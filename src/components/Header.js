@@ -7,19 +7,20 @@ function Header() {
     <div className="header">
       {/* 왼쪽 상단 로고 */}
       <div className="logo">
-        <p>로고</p>
+        <img src="/images/Logo.png" alt="쇼핑몰 로고" className="logo-img" />
       </div>
 
       {/* 중앙 쇼핑몰 이름 */}
       <div className="shop-name">
-        <h1>쇼핑몰 이름</h1>
+        <h1>Sping</h1>
       </div>
 
       {/* 오른쪽 상단 링크들 */}
       <div className="header-links">
         <Link to="/signup" className="header-link">회원 가입</Link>
         <Link to="/login" className="header-link">로그인</Link>
-        <Link to="/users" className="header-link">회원 목록</Link>
+        <Link to="/mypage" className="header-link">마이페이지</Link> {/* 마이페이지 링크 추가 */}
+        <Link to="/admin" className="header-link admin-link">관리자 페이지</Link>
       </div>
     </div>
   );

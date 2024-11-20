@@ -1,20 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import Users from './components/Users';
-import SignUp from './components/SignUp';  // È¸¿ø°¡ÀÔ ÄÄÆ÷³ÍÆ® Ãß°¡
-import Login from './components/Login';
+
+// React Routerì—ì„œ BrowserRouterë§Œ importí•˜ì—¬ ì‚¬ìš©
+import { BrowserRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
+  // Routerë¥¼ App ì»´í¬ë„ŒíŠ¸ì— ê°ì‹¸ì¤ë‹ˆë‹¤.
   <Router>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/users" element={<Users />} />
-      <Route path="/signup" element={<SignUp />} /> {/* È¸¿ø°¡ÀÔ ÆäÀÌÁö ¶ó¿ìÆ® Ãß°¡ */}
-      <Route path="/login" element={<Login/>}/>
-    </Routes>
+    <App />
   </Router>,
   document.getElementById('root')
 );

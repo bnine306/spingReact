@@ -1,0 +1,100 @@
+/* 카테고리 버튼 스타일 */
+.category-button, .sort-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    width: auto; /* 글자만 차지하는 공간 */
+    color: #007BFF;  /* 파란색 텍스트 */
+}
+
+/* 카테고리 버튼 선택된 상태 */
+.category-button.selected, .sort-button.selected {
+    color: white;
+    background-color: #007BFF; /* 선택된 버튼은 파란색 배경 */
+}
+
+/* 카테고리 드롭다운 스타일 */
+.category-dropdown {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: auto; /* 글자만 차지하는 공간 */
+}
+
+.category-list {
+    list-style-type: none;  /* 불릿 없애기 */
+    margin: 0;
+    padding: 0;
+}
+
+.category-list li {
+    padding: 10px 20px;
+    cursor: pointer;  /* 클릭 가능한 커서 */
+    background-color: #f0f0f0;
+    color: #000;
+    border-radius: 5px;
+    margin-bottom: 5px;  /* 항목 간 간격 */
+}
+
+.category-list li:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.category-list li.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 입력 필드 스타일 */
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* 상품 등록 제목과 홈 버튼을 가로로 배치 */
+.header-container {
+    text-align: left;
+}
+
+h2, .home-button {
+    display: inline-block;
+    margin: 0; /* 여백을 없애서 한 줄에 배치 */
+    vertical-align: middle; /* 수직 가운데 정렬 */
+}
+
+.home-button {
+    margin-left: 20px; /* 버튼과 제목 사이에 간격을 주기 */
+}
+
