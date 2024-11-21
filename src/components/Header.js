@@ -12,15 +12,15 @@ function Header() {
 
       {/* 중앙 쇼핑몰 이름 */}
       <div className="shop-name">
-        <h1>Sping</h1>
+        <h1>Store</h1>
       </div>
 
       {/* 오른쪽 상단 링크들 */}
       <div className="header-links">
         <Link to="/signup" className="header-link">회원 가입</Link>
         <Link to="/login" className="header-link">로그인</Link>
-        <Link to="/mypage" className="header-link">마이페이지</Link> {/* 마이페이지 링크 추가 */}
-        <Link to="/admin" className="header-link admin-link">관리자 페이지</Link>
+        <Link to="/mypage" className="header-link">마이페이지</Link>
+        <Link to="/admin" className="header-link">관리자 페이지</Link>
       </div>
     </div>
   );

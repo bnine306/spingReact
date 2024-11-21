@@ -1,12 +1,15 @@
-.App {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7; /* �ε巯�� ���� */
-  min-height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
+/* App.css */
+body {
+  background-image: url('http://localhost:3000/images/backgroundimg.jpg'); /* public 폴더 내부의 이미지 경로 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
 }
 
-h1 {
-  font-size: 2rem;
-  color: #333;
+/* 배경 이미지 위에 다른 콘텐츠가 오도록 설정 */
+.App {
+  position: relative;
+  z-index: 1; /* 배경 이미지 위에 다른 요소들이 올 수 있도록 설정 */
 }

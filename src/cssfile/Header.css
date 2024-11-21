@@ -1,82 +1,45 @@
-/* 전체 헤더 스타일 */
-.header {
+/* Header.css */
+.header {  
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;  /* 전체 화면을 꽉 채우도록 */
-  box-sizing: border-box;  /* padding을 포함한 크기로 설정 */
+  padding: 20px 40px;
+  background-color: #333;
+  color: white;
 }
 
-/* 로고 영역 */
 .logo {
-  flex: 1;
-  text-align: left;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  padding: 0 10px;
+  display: flex;
+  align-items: center;
 }
 
-/* 쇼핑몰 이름 */
-.shop-name {
-  flex: 2;
-  text-align: center;
+.logo-img {
+  height: 50px;
 }
 
 .shop-name h1 {
-  font-size: 1.8rem;
-  color: #333;
-  margin: 0;
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;  /* 텍스트 색상을 흰색으로 설정 */
 }
 
-/* 오른쪽 링크들 */
 .header-links {
   display: flex;
-  gap: 20px;
-  justify-content: flex-end;  /* 오른쪽 정렬 */
-  flex: 2;  /* 충분한 공간 확보 */
+  align-items: center;
 }
 
-/* 링크 스타일 */
 .header-link {
-  font-size: 1rem;
-  color: #333;
+  color: white;
+  margin-left: 20px;
   text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  background-color: #f1f1f1;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 16px;
 }
 
-/* 링크 hover 시 스타일 */
 .header-link:hover {
-  background-color: #007bff;
-  color: #fff;  /* 배경색 변경, 글자색 흰색 */
+  text-decoration: underline;
 }
 
-/* 관리자 페이지 링크 스타일 */
 .admin-link {
-  color: blue;  /* 파란색 텍스트 */
-  font-weight: bold;
-}
-
-/* 작은 화면에서 링크들이 겹치는 문제를 방지 */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column; /* 모바일에서는 세로로 쌓이게 */
-    align-items: center;
-  }
-
-  .header-links {
-    flex-direction: column;  /* 링크들을 세로로 배치 */
-    gap: 10px;
-    align-items: center;  /* 중앙 정렬 */
-  }
-
-  .header-link {
-    padding: 10px 20px;  /* 모바일에서는 여백을 조금 더 크게 */
-  }
+  color: #ff6347;
 }

@@ -1,3 +1,4 @@
+/* Shop.js */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';  // Link 컴포넌트를 추가합니다.
 import '../cssfile/Shop.css';
@@ -87,7 +88,7 @@ function Shop() {
                 <img
                   src={product.imageUrl}
                   alt={product.productnum}
-                  className="product-image"
+                  className="product-image"  // 이미지 클래스 적용
                 />
               </Link>
               <h3>{product.price} 원</h3>
