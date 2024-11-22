@@ -1,15 +1,18 @@
-/* App.css */
 body {
   background-image: url('http://localhost:3000/images/backgroundimg.jpg'); /* public 폴더 내부의 이미지 경로 */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;  /* 배경 이미지 고정 */
   height: 100vh;
   margin: 0;
 }
 
 /* 배경 이미지 위에 다른 콘텐츠가 오도록 설정 */
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 화면 전체 높이를 사용하도록 설정 */
   position: relative;
   z-index: 1; /* 배경 이미지 위에 다른 요소들이 올 수 있도록 설정 */
 }

@@ -1,7 +1,23 @@
+/* 전체 화면 컨테이너 */
+.product-input-container {
+    max-width: 700px; /* 최대 너비를 넓힘 */
+    margin: 0 auto;  /* 중앙 정렬 */
+    padding: 30px;    /* 패딩을 더 넓게 설정 */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가로 부드러운 느낌 */
+}
+
+/* 상품 등록 제목 스타일 */
+.header-container {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
 /* 카테고리 버튼 스타일 */
 .category-button, .sort-button {
-    padding: 8px 16px;
-    font-size: 16px;
+    padding: 10px 18px; /* 여백을 더 넓혀줌 */
+    font-size: 18px;    /* 글자 크기 조정 */
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -35,12 +51,12 @@
 }
 
 .category-list li {
-    padding: 10px 20px;
+    padding: 12px 22px; /* 항목 여백을 좀 더 넓게 설정 */
     cursor: pointer;  /* 클릭 가능한 커서 */
     background-color: #f0f0f0;
     color: #000;
     border-radius: 5px;
-    margin-bottom: 5px;  /* 항목 간 간격 */
+    margin-bottom: 8px;  /* 항목 간 간격 */
 }
 
 .category-list li:hover {
@@ -57,44 +73,48 @@
 input {
     display: block;
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 12px;  /* 여백을 더 넓게 설정 */
+    margin: 12px 0; /* 마진을 늘려주어 각 입력 필드 간 여백을 넓힘 */
     border-radius: 5px;
     border: 1px solid #ccc;
+    box-sizing: border-box;  /* 패딩과 보더를 포함하여 전체 너비 계산 */
 }
 
+/* 폼 제출 버튼 */
 button {
-    padding: 10px 20px;
+    padding: 12px 22px; /* 여백을 더 넓게 설정 */
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px; /* 글자 크기 조정 */
+    margin-top: 20px; /* 위쪽 마진을 늘려줌 */
 }
 
 button:hover {
     background-color: #45a049;
 }
 
+/* 에러 메시지 스타일 */
 .error {
     color: red;
     font-size: 14px;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
-/* 상품 등록 제목과 홈 버튼을 가로로 배치 */
-.header-container {
-    text-align: left;
-}
-
-h2, .home-button {
-    display: inline-block;
-    margin: 0; /* 여백을 없애서 한 줄에 배치 */
-    vertical-align: middle; /* 수직 가운데 정렬 */
-}
-
+/* 홈 버튼 스타일 */
 .home-button {
-    margin-left: 20px; /* 버튼과 제목 사이에 간격을 주기 */
+    margin-top: 30px; /* 버튼과 폼 간의 여백을 넓힘 */
+    padding: 12px 22px; /* 버튼 크기 확대 */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* 글자 크기 조정 */
 }
 
+.home-button:hover {
+    background-color: #0056b3;
+}

@@ -15,7 +15,7 @@ function SignUp() {
     // 이메일 중복 체크를 포함한 회원가입 요청
     const userDTO = { email, username, password };
 
-    const response = await fetch('http://localhost:8080/api/signup', {
+    const response = await fetch('/api/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -69,8 +69,6 @@ function SignUp() {
         </div>
         <button type="submit">회원가입</button>
       </form>
-      {/* 홈으로 돌아가기 버튼 추가 */}
-      <button onClick={() => navigate('/')}>홈으로 돌아가기</button>
     </div>
   );
 }

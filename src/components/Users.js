@@ -8,7 +8,7 @@ function UserList() {
 
   useEffect(() => {
     // API 호출하여 회원 목록 가져오기
-    fetch('http://localhost:8080/api/users')
+    fetch('/api/users')
       .then((response) => response.json())
       .then((data) => {
         console.log('Fetched data:', data);  // 응답 데이터 확인

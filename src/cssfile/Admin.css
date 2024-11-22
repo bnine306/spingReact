@@ -1,32 +1,105 @@
-/* 링크 간 간격 추가 */
+/* 전체 스타일 */
+.admin-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+}
+
+/* 링크 스타일 */
 .admin-links {
-    margin-bottom: 20px;
-  }
-  
-  .admin-links a {
-    margin-right: 15px; /* 링크들 사이의 간격 */
-    padding: 5px 10px; /* 링크에 여백 추가 */
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
-  .admin-links a:hover {
-    text-decoration: underline; /* 링크에 마우스 올렸을 때 밑줄 */
-  }
-  
-  /* 표 스타일 */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
+  margin-bottom: 20px;
+}
+
+.admin-links a {
+  margin-right: 15px;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.admin-links a:hover {
+  background-color: #0056b3;
+}
+
+/* 회원 목록 */
+.users-container {
+  margin-top: 30px;
+}
+
+.users-container h2 {
+  margin-bottom: 20px;
+}
+
+/* 표 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: auto;  /* 자동 너비 조정 */
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;  /* 표의 모든 텍스트 중앙 정렬 */
+  font-size: 16px;
+}
+
+table th {
+  background-color: #f4f4f4;
+}
+
+table td {
+  background-color: #fff;
+}
+
+/* 버튼 스타일 */
+button {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* 계정 삭제 버튼 스타일 */
+.delete-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+}
+
+.delete-button:hover {
+  background-color: #e60000;
+}
+
+/* 권한 부여 버튼 스타일 */
+.role-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.role-button:hover {
+  background-color: #0056b3;
+}
+
+/* "작업" 칼럼의 버튼들을 가운데로 정렬 */
+table td:last-child {
+  text-align: center; /* 마지막 칼럼에 있는 버튼들을 가운데로 정렬 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
   table th, table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
+      font-size: 14px;
   }
-  
-  table th {
-    background-color: #f4f4f4;
+
+  .admin-links a {
+      font-size: 14px;
   }
+}

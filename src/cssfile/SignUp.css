@@ -1,26 +1,38 @@
-.signup-container {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  margin: 50px auto;
-}
-
+/* 공통 폼 스타일 */
 form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
-form div {
-  margin-bottom: 15px;
+/* 컨테이너 스타일 */
+.signup-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  background: linear-gradient(135deg, #f0f8ff, #e6f7ff); /* 부드러운 배경 그라디언트 */
 }
 
+/* 제목 스타일 */
+h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* 입력 필드 스타일 */
 input {
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
+  padding: 12px;
+  font-size: 1rem;
   border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s ease;
 }
 
 input:focus {
@@ -28,21 +40,47 @@ input:focus {
   outline: none;
 }
 
+/* 버튼 스타일 */
 button {
   background-color: #007bff;
   color: white;
-  padding: 10px;
+  padding: 12px;
+  font-size: 1.1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   background-color: #0056b3;
+  transform: translateY(-2px); /* 버튼 애니메이션 */
 }
 
+button:active {
+  transform: translateY(2px); /* 클릭 시 반응 */
+}
+
+/* 에러 메시지 스타일 */
 p {
   font-size: 0.9rem;
   color: red;
+  text-align: center;
+}
+
+/* 홈으로 돌아가기 버튼과 회원가입 버튼 간 간격 */
+button + button {
+  margin-top: 50px; /* 홈으로 돌아가기 버튼과 회원가입 버튼 사이에 간격 추가 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .signup-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  input, button {
+    font-size: 1rem;
+  }
 }

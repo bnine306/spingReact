@@ -1,9 +1,10 @@
-/* Footer.css */
 .footer {
   background-color: #333;
   color: white;
   padding: 20px 40px;
   text-align: center;
+  position: relative; /* 위치가 콘텐츠에 맞게 결정되도록 설정 */
+  margin-top: auto; /* footer가 항상 하단에 위치하도록 */
 }
 
 .footer-content {
